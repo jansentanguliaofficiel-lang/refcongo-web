@@ -1,65 +1,53 @@
-import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    return (
+        <main className="flex flex-col min-h-screen">
+            {/* SECTION HERO */}
+            <section className="pt-40 pb-20 px-6">
+                <div className="max-w-5xl mx-auto">
+                    <div className="inline-block border border-brand-gold/30 bg-brand-gold/10 text-brand-gold px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-widest uppercase">
+                        Pôle d'Innovation - Kisangani
+                    </div>
+                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
+                        L'excellence technologique pour <span className="text-brand-gold">refonder</span> le Congo.
+                    </h1>
+                    <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+                        RefCongo est le cercle privé des leaders de l’innovation et de l’ingénierie.
+                        Rejoignez une communauté sélective dédiée à bâtir l’avenir technologique de la R.D.C.
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <button className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-all">
+                            Devenir Membre Fondateur
+                        </button>
+                        <button className="border border-white/20 hover:bg-white/5 px-8 py-4 rounded-lg font-bold text-lg transition-all">
+                            Lire le Manifeste
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION CHIFFRES */}
+            <section className="py-20 border-y border-white/5 bg-white/[0.02]">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                    <div>
+                        <div className="text-4xl font-bold text-brand-gold mb-2">15</div>
+                        <div className="text-sm text-slate-500 uppercase tracking-widest">Places Fondateurs</div>
+                    </div>
+                    <div>
+                        <div className="text-4xl font-bold text-white mb-2">30%</div>
+                        <div className="text-sm text-slate-500 uppercase tracking-widest">Offre Lancement</div>
+                    </div>
+                    <div>
+                        <div className="text-4xl font-bold text-white mb-2">100%</div>
+                        <div className="text-sm text-slate-500 uppercase tracking-widest">Sélectif</div>
+                    </div>
+                    <div>
+                        <div className="text-4xl font-bold text-white mb-2">Tech</div>
+                        <div className="text-sm text-slate-500 uppercase tracking-widest">Focus Expertise</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }
